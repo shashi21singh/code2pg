@@ -403,6 +403,7 @@ $oracle_functions_list_4{'XMLQUERY'}{'regex'}                     = '\bXMLQUERY\
 $oracle_functions_list_4{'XMLSEQUENCE'}{'regex'}                  = '\bXMLSEQUENCE\s*\(';
 $oracle_functions_list_4{'XMLTABLE'}{'regex'}                     = '\bXMLTABLE\s*\(';
 $oracle_functions_list_4{'XMLTRANSFORM'}{'regex'}                 = '\bXMLTRANSFORM\s*\(';
+$oracle_functions_list_4{'INSERT WHEN'}{'regex'}                   = '\bINSERT\s+WHEN\b';
 
 # ORA_FUNC_EXTRA - comments/links on oracle functions
 $oracle_functions_list_3{'ORACLE_OUTER_JOIN'}{'sourcedocumentation'} = '';
@@ -1417,6 +1418,10 @@ $oracle_functions_list_4{'XMLTRANSFORM'}{'sourcedocumentation'} = 'http://docs.o
 $oracle_functions_list_4{'XMLTRANSFORM'}{'pgdocumentation'} = '';
 $oracle_functions_list_4{'XMLTRANSFORM'}{'pginstruction'} = 'No equivalent';
 $oracle_functions_list_4{'XMLTRANSFORM'}{'comments'} = q{};
+$oracle_functions_list_4{'INSERT WHEN'}{'sourcedocumentation'} = 'https://docs.oracle.com/en/database/oracle/oracle-database/12.2/sqlrf/INSERT.html';
+$oracle_functions_list_4{'INSERT WHEN'}{'pgdocumentation'} = 'https://www.postgresql.org/docs/current/static/queries-with.html';
+$oracle_functions_list_4{'INSERT WHEN'}{'pginstruction'} = 'WITH ';
+$oracle_functions_list_4{'INSERT WHEN'}{'comments'} = q{};
 $oracle_functions_list_2{'XMLTYPE'}{'sourcedocumentation'} = '';
 $oracle_functions_list_2{'XMLTYPE'}{'pgdocumentation'} = 'https://www.postgresql.org/docs/current/static/datatype-xml.html';
 $oracle_functions_list_2{'XMLTYPE'}{'pginstruction'} = 'xml';
@@ -3100,7 +3105,8 @@ sub main {
 
         # Sed is adding ^M on the files I tried. We remove them.
         if ( $modified_file == 1 ) {
-            my $sed_res = `sed -i 's///g' "$file"`;
+            my $sed_res = `sed -i 's/
+//g' "$file"`;
         }
     }
     print "\rDone !                                                     \n" if (!$quiet_exec);
