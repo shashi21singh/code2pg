@@ -225,6 +225,14 @@ $oracle_functions_list_2{'VAR_SAMP'}{'regex'}        = '\bVAR_SAMP\s*\(';
 $oracle_functions_list_2{'WIDTH_BUCKET'}{'regex'}    = '\bWIDTH_BUCKET\s*\(';
 $oracle_functions_list_2{'XMLAGG'}{'regex'}          = '\bXMLAGG\s*\(';
 $oracle_functions_list_2{'XMLTYPE'}{'regex'}         = '\bXMLTYPE\b';
+#ORACLE MISCELLANEOUS FUNCTION
+$oracle_functions_list_2{'SQLCODE'}{'regex'}            = '\bSQLCODE\b';
+$oracle_functions_list_2{'SQLERRM'}{'regex'}            = '\bSQLERRM\b';
+$oracle_functions_list_2{'GATHER_INDEX_STATS'}{'regex'} = '\bGATHER_INDEX_STATS\s*\(';
+$oracle_functions_list_2{'GATHER_TABLE_STATS'}{'regex'} = '\bGATHER_TABLE_STATS\s*\(';
+$oracle_functions_list_2{'GATHER_SCHEMA_STATS'}{'regex'} = '\bGATHER_SCHEMA_STATS\s*\(';
+$oracle_functions_list_2{'GATHER_DATABASE_STATS'}{'regex'} = '\bGATHER_DATABASE_STATS\s*\(';
+$oracle_functions_list_2{'GATHER_SYSTEM_STATS'}{'regex'} = '\bGATHER_SYSTEM_STATS\s*\(';
 
 # ORA_FUNC_3 - each keyword will be matched with a corresponding regex - level 3
 $oracle_functions_list_3{'ORACLE_OUTER_JOIN'}{'regex'} = '\(\+\)';
@@ -1426,6 +1434,34 @@ $oracle_functions_list_2{'XMLTYPE'}{'sourcedocumentation'} = '';
 $oracle_functions_list_2{'XMLTYPE'}{'pgdocumentation'} = 'https://www.postgresql.org/docs/current/static/datatype-xml.html';
 $oracle_functions_list_2{'XMLTYPE'}{'pginstruction'} = 'xml';
 $oracle_functions_list_2{'XMLTYPE'}{'comments'} = q{Oracle's `XMLTYPE` is equivalent to PostgreSQL xml type. Its use is dependant on libxml (can be checked with pg_config). Should be the case on all Redhat like systems.};
+$oracle_functions_list_2{'SQLCODE'}{'sourcedocumentation'} = '';
+$oracle_functions_list_2{'SQLCODE'}{'pgdocumentation'} = '';
+$oracle_functions_list_2{'SQLCODE'}{'pginstruction'} = '';
+$oracle_functions_list_2{'SQLCODE'}{'comments'} = q{};
+$oracle_functions_list_2{'SQLERRM'}{'sourcedocumentation'} = '';
+$oracle_functions_list_2{'SQLERRM'}{'pgdocumentation'} = '';
+$oracle_functions_list_2{'SQLERRM'}{'pginstruction'} = '';
+$oracle_functions_list_2{'SQLERRM'}{'comments'} = q{};
+$oracle_functions_list_2{'GATHER_INDEX_STATS'}{'sourcedocumentation'} = '';
+$oracle_functions_list_2{'GATHER_INDEX_STATS'}{'pgdocumentation'} = '';
+$oracle_functions_list_2{'GATHER_INDEX_STATS'}{'pginstruction'} = '';
+$oracle_functions_list_2{'GATHER_INDEX_STATS'}{'comments'} = q{};
+$oracle_functions_list_2{'GATHER_TABLE_STATS'}{'sourcedocumentation'} = '';
+$oracle_functions_list_2{'GATHER_TABLE_STATS'}{'pgdocumentation'} = '';
+$oracle_functions_list_2{'GATHER_TABLE_STATS'}{'pginstruction'} = '';
+$oracle_functions_list_2{'GATHER_TABLE_STATS'}{'comments'} = q{};
+$oracle_functions_list_2{'GATHER_SCHEMA_STATS'}{'sourcedocumentation'} = '';
+$oracle_functions_list_2{'GATHER_SCHEMA_STATS'}{'pgdocumentation'} = '';
+$oracle_functions_list_2{'GATHER_SCHEMA_STATS'}{'pginstruction'} = '';
+$oracle_functions_list_2{'GATHER_SCHEMA_STATS'}{'comments'} = q{};
+$oracle_functions_list_2{'GATHER_DATABASE_STATS'}{'sourcedocumentation'} = '';
+$oracle_functions_list_2{'GATHER_DATABASE_STATS'}{'pgdocumentation'} = '';
+$oracle_functions_list_2{'GATHER_DATABASE_STATS'}{'pginstruction'} = '';
+$oracle_functions_list_2{'GATHER_DATABASE_STATS'}{'comments'} = q{};
+$oracle_functions_list_2{'GATHER_SYSTEM_STATS'}{'sourcedocumentation'} = '';
+$oracle_functions_list_2{'GATHER_SYSTEM_STATS'}{'pgdocumentation'} = '';
+$oracle_functions_list_2{'GATHER_SYSTEM_STATS'}{'pginstruction'} = '';
+$oracle_functions_list_2{'GATHER_SYSTEM_STATS'}{'comments'} = q{};
 
 # DB2_FUNC_1 - each keyword will be matched with a corresponding regex - level 1
 
